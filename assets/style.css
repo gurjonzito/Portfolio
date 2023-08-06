@@ -512,58 +512,65 @@ header::after{
 #Projetos .heading-p{
     margin-top: 9rem;
 }
-.portfolio .box-container{
-    display: grid;
-    grid-template-columns: 500px 500px;
-    justify-content: center;
-    gap: 1.5rem;
-}
-.portfolio .box-container .box{
-    flex: 1 1 30rem;
-    height: 25rem;
+#Projetos{
+    padding: 30px 7%;
     position: relative;
-    overflow: hidden;
-    border: 1rem solid var(--color-dark);
-    box-shadow: rgba(255, 255, 255, 0.25);
-    background: var(--color-dark);
 }
-.portfolio .box-container .box img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    position: relative;
-    z-index: 1;
-}
-.portfolio .box-container .box:hover img{
-    height: 80%;
-    width: 80%;
-    border-radius: var(--border-radius1);
-}
-.portfolio .box-container .box h3{
+#Projetos::after{
+    content: '';
+    width: 30%;
+    height: 1px;
     position: absolute;
-    bottom: .5rem; left:1rem;
-    font-size: 2.5rem;
+    bottom: 0;
+    left: 35%;
+}
+#Projetos .portfolio-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2.4rem;
+    margin-top: 70px;
+}
+#Projetos .portfolio-grid .portfolio-item{
+    position: relative;
+    border-radius: 15px;
+}
+#Projetos .portfolio-grid .portfolio-item .port-img-box img{
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+}
+#Projetos .portfolio-grid .portfolio-item .port-img-info{
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    gap: 20px;
+    opacity: 0;
+    transition: var(--transition);
+    transform: scale(0);
+}
+#Projetos .portfolio-grid .portfolio-item:hover .port-img-info{
+    opacity: 1;
+    transform: scale(1);
+}
+#Projetos .portfolio-grid .portfolio-item:hover .port-img-info h2{
+    font-size: 30px;
+    font-weight: 600;
     color: var(--color-white);
 }
-.portfolio .box-container .box .icons{
-    position: absolute;
-    top: 1rem; right: 1rem;
-}
-.portfolio .box-container .box .icons a{
-    display: block;
-    height: 4rem;
-    width: 4rem;
-    border-radius: .5rem;
-    background: var(--color-white);
-    color: var(--color-black);
-    font-size: 1.7rem;
-    line-height: 4rem;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-.portfolio .box-container .box .icons a:hover{
-    background: var(--color-primary);
-    color: var(--color-dark);
+#Projetos .portfolio-grid .portfolio-item:hover .port-img-info a{
+    background-color: var(--color-bg);
+    color: var(--color-white);
+    font-size: 20px;
+    padding: 14px 15px;
+    border-radius: 50%;
 }
 /* Projetos */
 
@@ -661,10 +668,9 @@ footer .nav-links{
                                 'infoSection';
         grid-template-columns: repeat(1, 1fr);
     }
-    .portfolio .box-container{
+    #Projetos .portfolio-grid{
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 /* Max-width:991px */
