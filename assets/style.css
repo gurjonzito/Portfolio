@@ -75,7 +75,7 @@ p{
     text-align: center;
 }
 .heading-p{
-    padding-top: 9rem;
+    padding-top: 1rem;
     text-align: center;
 }
 .icon1{
@@ -138,7 +138,7 @@ p{
 }
 
 
-/* Start Aside Bar */
+/* Aside Bar */
 aside{
     width: 320px;
     height: 100vh;
@@ -178,7 +178,7 @@ aside{
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid var(--color-primary);
-    box-shadow: 0 0 20px var(--color-primary);
+    box-shadow: 0 0 20px var(--color-dark);
 }
 .profile-image img{
     width: 100%;
@@ -201,7 +201,7 @@ aside{
 .aside-links li a:hover{
     color: var(--color-primary);
 }
-/* End Aside Bar */
+/* Aside Bar */
 
 main{
     width: calc(100% - 320px);
@@ -217,7 +217,7 @@ main{
     color: var(--color-white);
     font-size: 1.8rem;
 }
-/* Start Header */
+/* Header */
 header{
     width: 100%;
     height: 100vh;
@@ -274,7 +274,7 @@ header::after{
 .header-social .btn{
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
 }
-/* End Header */
+/* Header */
 
 /* Sobre */
 .about_container{
@@ -312,7 +312,7 @@ header::after{
 .infoSection h1{
     font-size: 40px;
     display: inline-block;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     position: relative;
 }
 .infoSection h1::before{
@@ -474,22 +474,13 @@ header::after{
 }
 
 /* Skills */
-.arrow{
-    position: absolute;
-    right: 3%;
-    transition: var(--transition);
-    margin-top: 1.4rem;
-}
-.arrow:hover{
-    margin-top: 2rem;
-}
 .experience-container{
     display: grid;
     grid-template-columns:1fr 1fr;
     gap: 4rem;
 }
 .experience-box{
-    border: 1px solid var(--color-primary);
+    border: 1px solid var(--color-bg);
     border-radius: 30px;
     padding: 24px;
 }
@@ -511,11 +502,75 @@ header::after{
 .ex-div h4{
     font-size: 20px;
 }
+/* Skills */
+
+/* Projetos */
+#Projetos .heading-p{
+    margin-top: 9rem;
+}
+.portfolio .box-container{
+    display: grid;
+    grid-template-columns: 500px 500px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.portfolio .box-container .box{
+    flex: 1 1 30rem;
+    height: 25rem;
+    position: relative;
+    overflow: hidden;
+    border: 1rem solid var(--color-dark);
+    box-shadow: rgba(255, 255, 255, 0.25);
+    background: var(--color-dark);
+}
+.portfolio .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+.portfolio .box-container .box:hover img{
+    height: 80%;
+    width: 80%;
+    border-radius: var(--border-radius1);
+}
+.portfolio .box-container .box h3{
+    position: absolute;
+    bottom: .5rem; left:1rem;
+    font-size: 2.5rem;
+    color: var(--color-white);
+}
+.portfolio .box-container .box .icons{
+    position: absolute;
+    top: 1rem; right: 1rem;
+}
+.portfolio .box-container .box .icons a{
+    display: block;
+    height: 4rem;
+    width: 4rem;
+    border-radius: .5rem;
+    background: var(--color-white);
+    color: var(--color-black);
+    font-size: 1.7rem;
+    line-height: 4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.portfolio .box-container .box .icons a:hover{
+    background: var(--color-primary);
+    color: var(--color-dark);
+}
+/* Projetos */
 
 /* Contato */
+#Contato .heading-p{
+    margin-top: 9rem;
+}
 .contact-container{
     max-width: 19rem;
-    border: 1px solid var(--color-dark);
+    border: 1px solid var(--color-bg);
     padding: 24px;  
     border-radius: 30px;
     display: flex;
@@ -577,6 +632,9 @@ footer .nav-links{
         margin: 0;
         position: relative;
     }
+    section {
+        break-inside: avoid;
+      }
     .menu-bars{
         display: inline-block;
         top: 2%;
@@ -591,8 +649,13 @@ footer .nav-links{
         height: 72vh;
     }
     .about_container .about_contents{
-        grid-template-areas: 'imageSect'
-                             'infoSect';
+        display: grid;
+        grid-template-areas: 'imageSection'
+                                'infoSection';
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .portfolio .box-container{
+        grid-template-columns: 1fr;
     }
 }
 /* Max-width:991px */
@@ -604,7 +667,7 @@ footer .nav-links{
       /*Start Experience  */
       .experience-container{
         grid-template-columns: 1fr;
-      }   
+      } 
 }
 /* Max-Width(768px) */
 @media (max-width:768px) {
@@ -647,11 +710,9 @@ footer .nav-links{
     .btn{
         padding: 10px 20px;
     }   
-    /* .........Start Aside........ */
     aside{
         width: 18rem;
     }
-    /* .........Start Header........ */
     header{
         height: 76vh;
     }
