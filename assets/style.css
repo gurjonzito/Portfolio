@@ -516,7 +516,6 @@ header::after{
     display: grid;
     grid-template-columns: 500px 500px;
     justify-content: center;
-
     gap: 1.5rem;
 }
 .portfolio .box-container .box{
@@ -663,6 +662,7 @@ footer .nav-links{
         grid-template-columns: repeat(1, 1fr);
     }
     .portfolio .box-container{
+        display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
     }
