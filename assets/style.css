@@ -663,7 +663,8 @@ footer .nav-links{
         grid-template-columns: repeat(1, 1fr);
     }
     .portfolio .box-container{
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
 /* Max-width:991px */
