@@ -664,6 +664,7 @@ footer .nav-links{
     }
     .portfolio .box-container{
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 }
 /* Max-width:991px */
