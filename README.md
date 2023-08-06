@@ -8,7 +8,7 @@
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- [HTML](https://expo.io/)
-- [CSS](https://nodejs.org/en/)
-- [JavaScript](https://pt-br.reactjs.org/)
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [JavaScript](https://www.javascript.com/)
 
